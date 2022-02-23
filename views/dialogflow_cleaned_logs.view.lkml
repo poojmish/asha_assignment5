@@ -22,6 +22,11 @@ view: dialogflow_cleaned_logs {
     sql: ${TABLE}.platform ;;
   }
 
+  dimension: platform_refined {
+    type: string
+    sql: if(${TABLE}.platform is null or ${TABLE}.platform ='', 'NA', ${TABLE}.platform);;
+  }
+
   dimension: query_text {
     type: string
     sql: ${TABLE}.queryText ;;
