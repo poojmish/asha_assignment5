@@ -60,4 +60,8 @@ view: session_level_data {
     type: count
     drill_fields: []
   }
+  measure: avg_sentiment_score {
+    type: average
+    sql: ${avg_text_sentiment_score} ;;
+  }
 }
