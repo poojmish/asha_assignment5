@@ -32,6 +32,11 @@ view: session_level_data {
     sql: ${TABLE}.platform ;;
   }
 
+  dimension: platform_refined {
+    type: string
+    sql: if(${TABLE}.platform is null or ${TABLE}.platform ='', 'NA', ${TABLE}.platform);;
+  }
+
   dimension: session_id {
     type: string
     sql: ${TABLE}.sessionId ;;
