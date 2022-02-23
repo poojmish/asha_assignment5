@@ -56,6 +56,11 @@ view: dialogflow_cleaned_logs {
     sql: ${TABLE}.text_sentiment_score ;;
   }
 
+  dimension: numeric_sentiment_score_dim {
+    type: number
+    sql: CAST(${TABLE}.text_sentiment_score as INTEGER);;
+  }
+
   dimension_group: timestamp {
     type: time
     timeframes: [
@@ -80,6 +85,6 @@ view: dialogflow_cleaned_logs {
   }
   measure: avg_sentiment_score {
     type: average
-    sql: ${text_sentiment_score} ;;
+    sql: ${numeric_sentiment_score_dim} ;;
   }
 }
