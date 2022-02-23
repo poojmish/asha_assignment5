@@ -53,7 +53,7 @@ view: dialogflow_cleaned_logs {
 
   dimension: text_sentiment_score {
     type: string
-    sql: to_number(${TABLE}.text_sentiment_score) ;;
+    sql: ${TABLE}.text_sentiment_score ;;
   }
 
   dimension_group: timestamp {
