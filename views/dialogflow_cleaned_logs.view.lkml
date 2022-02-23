@@ -73,5 +73,13 @@ view: dialogflow_cleaned_logs {
   measure: count {
     type: count
     drill_fields: [display_name]
+
+
+  }
+  measure: total_sessions {
+    type: count
+    drill_fields: [session_id]
+
+
   }
 }
