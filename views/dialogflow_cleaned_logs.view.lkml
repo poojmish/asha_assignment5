@@ -72,7 +72,7 @@ view: dialogflow_cleaned_logs {
 
   measure: total_sessions {
     type: count_distinct
-    sql: $[session_id] ;;
+    sql: ${session_id} ;;
 
 
   }
