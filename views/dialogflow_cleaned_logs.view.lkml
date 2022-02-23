@@ -70,14 +70,9 @@ view: dialogflow_cleaned_logs {
     sql: ${TABLE}.timestamp ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [display_name]
 
-
-  }
   measure: total_sessions {
-    type: sum
+    type: count_distinct
     drill_fields: [session_id]
 
 
