@@ -92,4 +92,8 @@ view: dialogflow_cleaned_logs {
     type: average
     sql: ${numeric_sentiment_score_dim} ;;
   }
+  measure: Queries_analyis {
+    type: count_distinct
+    sql: ${is_fallback} ;;
+  }
 }
