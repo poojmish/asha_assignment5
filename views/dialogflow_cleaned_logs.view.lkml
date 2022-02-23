@@ -78,4 +78,8 @@ view: dialogflow_cleaned_logs {
     type: count_distinct
     sql: ${query_text} ;;
   }
+  measure: avg_sentiment_score {
+    type: average
+    sql: ${text_sentiment_score} ;;
+  }
 }
