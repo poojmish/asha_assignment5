@@ -14,7 +14,7 @@ view: dialogflow_cleaned_logs {
 
   dimension: language_code {
     type: string
-    sql: ${TABLE}.languageCode ;;
+    sql: ${TABLE}.languageCode ;
   }
 
   dimension: platform {
