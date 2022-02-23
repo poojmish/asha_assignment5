@@ -58,7 +58,7 @@ view: dialogflow_cleaned_logs {
 
   dimension: numeric_sentiment_score_dim {
     type: number
-    sql: CAST(${TABLE}.text_sentiment_score as FLOAT);;
+    sql: CAST(${TABLE}.text_sentiment_score as FLOAT64);;
   }
 
   dimension_group: timestamp {
