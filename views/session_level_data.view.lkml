@@ -64,4 +64,8 @@ view: session_level_data {
     type: average
     sql: ${avg_text_sentiment_score} ;;
   }
+  measure: sessions_count {
+    type: count
+    drill_fields: [session_id]
+  }
 }
