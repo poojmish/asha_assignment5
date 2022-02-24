@@ -68,4 +68,8 @@ view: session_level_data {
     type: count
     drill_fields: [session_id]
   }
+  measure: avg_conversation_score {
+    type: average
+    sql: ${conversation_duration_seconds} ;;
+  }
 }
